@@ -31,9 +31,12 @@ def Feature_matching():
 
     img_matches = cv2.drawMatches(img1, keypoints1, img2, keypoints2, matches[:50], None, flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)  # Draw the top 50 matches
 
+    print("Number of matches:", len(matches))  # Print the number of matches
+    print("Matching completed!")  # Print message to indicate completion
     cv2.imshow("Matches", img_matches)  # Display the matches
     cv2.waitKey(0)  # Wait for a key press
     cv2.destroyAllWindows()  # Close all OpenCV windows
+    print("Feature matching completed!")  # Print message to indicate completion
 
 root = Tk()  # Create the main window
 root.title('Feature Matching')  # Set the window title
